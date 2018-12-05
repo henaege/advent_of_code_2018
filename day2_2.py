@@ -13,12 +13,22 @@
 #
 # What letters are common between the two correct box IDs? (In the example above, this is found by removing the differing character from either ID, producing fgij.)
 
-box_id_set = set(line.strip() for line in open('input2.txt'))
+box_id_set1 = set(line.strip() for line in open('input2.txt'))
+box_id_set2 = box_id_set1
 input_file = open('input2.txt')
 
-box_id_list = input_file.readlines()
+box_id_list1 = input_file.readlines()
+box_id_list2 = box_id_list1
 
 input_file.close()
 
+A = {'fghij'}
+B = {'fguij'}
 
+# print(box_id_set)
+
+for id1 in box_id_list1:
+    id1_list = list(id1)
+    for id2 in box_id_set2:
+        id2_list = list(id2)
 
